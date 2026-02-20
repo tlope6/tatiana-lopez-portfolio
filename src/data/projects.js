@@ -31,7 +31,7 @@ export const PROJECTS = [
         link: "https://github.com/tlope6/GlobalStudios", 
         tags: ["React", "Three.js", "SQL", "Supabase" ],
         image: globalStudios,
-        liveLink: "https://globalstudios-66e31e84.aedify.ai/",
+        liveLink: "https://tlope6.github.io/GlobalStudios/",
         
     },
 ];
