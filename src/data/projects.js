@@ -41,7 +41,7 @@ export const PROJECTS = [
     tags: ["Python", "OpenCV", "Computer Vision"],
     image: hobbyist_find,
     liveLink: "https://hobbyist-find.vercel.app/" ,
-    color: "#ff8a9e",
+    color: "#f79ac0",
   },
   {
     id: 3,
@@ -60,6 +60,6 @@ export const PROJECTS = [
     tags: ["React", "JavaScript", "SQL"],
     image: globalStudios,
     liveLink: "https://tlope6.github.io/GlobalStudios/",
-    color: "#8affc1",
+    color: "#9e7bb5",
   },
 ];
