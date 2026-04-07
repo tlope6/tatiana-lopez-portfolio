@@ -12,6 +12,7 @@ export const SKILLS = [
   { name: "CSS", level: 80 },
   { name: "F#", level: 30},
   { name: ".NET", level: 20},
+  { name: "Go", level: 10},
   
 ];
 

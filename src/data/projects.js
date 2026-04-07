@@ -1,7 +1,7 @@
 
 import globalStudios from "../assets/globalStudios.png";
 import dream from "../assets/dream.png"
-import sayCheese from "../assets/say-cheese.png"
+import hobbyist_find from "../assets/hobbyist_find.png"
 
 
 export const PROJECTS = [
@@ -26,21 +26,21 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: "Say Cheese?",
-    subtitle: "Computer Vision · Gesture Control · Real-Time Detection",
+    title: "HobbyFind", 
+    subtitle: "Hobby · Full-Stack · Geolocation",
     description:
-      "An interactive Python application that uses hand gestures and facial detection to control a live camera interface, blending computer vision, creative visuals, and data logging. ",
+      "A location-based hobby discovery app that connects people with local events, workshops, and activities in their area",
     details: [
-      "Implemented real-time hand tracking and gesture recognition using MediaPipe",
-      "Built facial detection system for automated camera triggers",
-      "Created interactive overlay system with creative visual effects",
+      "Built a full-stack hobby discovery web app using React 19, Vite, and TailWind CSS with a responsive deisgn that adapts across desktop, tablet, and mobile",
+      "Integrated Mapbox GL JS to render an interactive location-based map with real-time event pins, adjustable search radius, and custom category markers",
+      "Implemented live search with instant dropdown filtering ",
       "Added data logging for tracking user interactions and session analytics",
     ],
-    tech: ["Python", "OpenCV", "MediaPipe", "NumPy"],
-    link: "https://github.com/tlope6/Say-Cheese-",
+    tech: ["React", "MapBox GL JS", "Supabase", "PostgreSQL", "Parallel API", "HTML", "Node.js", "Express"],
+    link: "https://github.com/tlope6/HobbyistFind",
     tags: ["Python", "OpenCV", "Computer Vision"],
-    image: sayCheese,
-    liveLink: null,
+    image: hobbyist_find,
+    liveLink: "https://hobbyist-find.vercel.app/" ,
     color: "#ff8a9e",
   },
   {
