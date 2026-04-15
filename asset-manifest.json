@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.js": "/tatiana-lopez-portfolio/static/js/main.8c3ee522.js",
+    "main.js": "/tatiana-lopez-portfolio/static/js/main.e9978c6d.js",
     "static/media/githubpic.png": "/tatiana-lopez-portfolio/static/media/githubpic.de6cf642f14794e6f624.png",
     "static/media/globalStudios.png": "/tatiana-lopez-portfolio/static/media/globalStudios.611af9f9a1dccb750622.png",
     "static/media/dream.png": "/tatiana-lopez-portfolio/static/media/dream.c39399040f938cd0c396.png",
+    "static/media/saycheese.png": "/tatiana-lopez-portfolio/static/media/saycheese.03cc82d25044fc20c7d5.png",
     "static/media/hobbyist_find.png": "/tatiana-lopez-portfolio/static/media/hobbyist_find.d4b76950377c2ea71276.png",
     "index.html": "/tatiana-lopez-portfolio/index.html",
-    "main.8c3ee522.js.map": "/tatiana-lopez-portfolio/static/js/main.8c3ee522.js.map"
+    "main.e9978c6d.js.map": "/tatiana-lopez-portfolio/static/js/main.e9978c6d.js.map"
   },
   "entrypoints": [
-    "static/js/main.8c3ee522.js"
+    "static/js/main.e9978c6d.js"
   ]
 }
