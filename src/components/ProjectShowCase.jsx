@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
-export default function ProjectShowCase({ project, index, total }) {
+export default function ProjectShowcase({ project, index, total }) {
   const [ref, isVisible] = useRevealOnScroll(0.1);
   const [hovered, setHovered] = useState(false);
   const isEven = index % 2 === 0;
@@ -64,7 +64,9 @@ export default function ProjectShowCase({ project, index, total }) {
           />
         ) : (
           <div style={{ textAlign: "center", padding: 40 }}>
-            <div style={{ fontSize: "2.5rem", marginBottom: 12, opacity: 0.6 }}>
+            <div
+              style={{ fontSize: "2.5rem", marginBottom: 12, opacity: 0.6 }}
+            >
               {index === 0 ? "🎵" : index === 1 ? "📸" : "💰"}
             </div>
             <div
@@ -122,7 +124,6 @@ export default function ProjectShowCase({ project, index, total }) {
           {project.description}
         </p>
 
-        {/* Detail bullets */}
         <div style={{ margin: "0 0 20px" }}>
           {project.details.map((detail, i) => (
             <div
@@ -151,7 +152,6 @@ export default function ProjectShowCase({ project, index, total }) {
           ))}
         </div>
 
-        {/* Tech tags */}
         <div
           style={{
             display: "flex",
@@ -179,7 +179,6 @@ export default function ProjectShowCase({ project, index, total }) {
           ))}
         </div>
 
-        {/* Links */}
         <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
           <a
             href={project.link}

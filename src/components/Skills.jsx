@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 import { SKILLS } from "../data/skills";
 
@@ -9,30 +9,49 @@ const COLORS = [
 
 function SkillBar({ name, level, delay, color }) {
   const [ref, isVisible] = useRevealOnScroll(0.1);
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div
       ref={ref}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
       style={{
-        marginBottom: 16,
+        marginBottom: 18,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(20px)",
         transition: `all 0.6s ease ${delay * 0.08}s`,
+        padding: "8px 12px",
+        borderRadius: 10,
+        background: hovered ? "rgba(255,255,255,0.03)" : "transparent",
+        cursor: "default",
       }}
     >
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginBottom: 6,
+          marginBottom: 8,
         }}
       >
         <span
-          style={{ color: "#c5cce6", fontSize: "0.9rem", fontWeight: 600 }}
+          style={{
+            color: hovered ? "#e0e4ff" : "#c5cce6",
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            transition: "color 0.3s ease",
+          }}
         >
           {name}
         </span>
-        <span style={{ color: "#6e7494", fontSize: "0.8rem" }}>
+        <span
+          style={{
+            color: hovered ? color : "#6e7494",
+            fontSize: "0.8rem",
+            fontWeight: 600,
+            transition: "color 0.3s ease",
+          }}
+        >
           {level}%
         </span>
       </div>
@@ -50,8 +69,12 @@ function SkillBar({ name, level, delay, color }) {
             borderRadius: 3,
             width: isVisible ? `${level}%` : "0%",
             background: `linear-gradient(90deg, ${color}, ${color}88)`,
-            transition: `width 1.2s cubic-bezier(0.23, 1, 0.32, 1) ${delay * 0.08 + 0.3}s`,
-            boxShadow: `0 0 10px ${color}40`,
+            transition: `width 1.2s cubic-bezier(0.23, 1, 0.32, 1) ${
+              delay * 0.08 + 0.3
+            }s`,
+            boxShadow: hovered
+              ? `0 0 14px ${color}50`
+              : `0 0 8px ${color}30`,
           }}
         />
       </div>

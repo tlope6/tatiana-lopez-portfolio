@@ -38,7 +38,6 @@ const EXPERIENCES = [
 ];
 
 
-
 function ExperienceCard({ experience, index }) {
   const [ref, isVisible] = useRevealOnScroll(0.1);
   const [hovered, setHovered] = useState(false);
@@ -72,9 +71,7 @@ function ExperienceCard({ experience, index }) {
             borderRadius: "50%",
             background: hovered ? experience.color : "transparent",
             border: `2px solid ${experience.color}`,
-            boxShadow: hovered
-              ? `0 0 15px ${experience.color}50`
-              : "none",
+            boxShadow: hovered ? `0 0 15px ${experience.color}50` : "none",
             transition: "all 0.3s ease",
             marginTop: 6,
           }}
@@ -103,12 +100,9 @@ function ExperienceCard({ experience, index }) {
             : "1px solid rgba(255,255,255,0.06)",
           transition: "all 0.4s ease",
           marginBottom: 24,
-          boxShadow: hovered
-            ? `0 4px 30px ${experience.color}10`
-            : "none",
+          boxShadow: hovered ? `0 4px 30px ${experience.color}10` : "none",
         }}
       >
-        {/* Date tag */}
         <div
           style={{
             fontSize: "0.75rem",
@@ -123,7 +117,6 @@ function ExperienceCard({ experience, index }) {
           {experience.date}
         </div>
 
-        {/* Role + Company */}
         <h3
           style={{
             fontSize: "1.3rem",
@@ -145,7 +138,6 @@ function ExperienceCard({ experience, index }) {
           {experience.company}
         </div>
 
-        {/* Description */}
         <p
           style={{
             color: "#9da4c4",
@@ -157,7 +149,6 @@ function ExperienceCard({ experience, index }) {
           {experience.description}
         </p>
 
-        {/* Bullets */}
         <div>
           {experience.bullets.map((bullet, i) => (
             <div

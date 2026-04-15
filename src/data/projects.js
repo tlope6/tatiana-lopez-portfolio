@@ -2,11 +2,49 @@
 import globalStudios from "../assets/globalStudios.png";
 import dream from "../assets/dream.png"
 import hobbyist_find from "../assets/hobbyist_find.png"
-
+import saycheese from "../assets/saycheese.png"
 
 export const PROJECTS = [
+
   {
     id: 1,
+    title: "Say Cheese?",
+    subtitle: "Computer Vision · Gesture Control · Real-Time Detection",
+    description:
+      "An interactive Python application that uses hand gestures and facial detection to control a live camera interface, blending computer vision, creative visuals, and data logging.",
+    details: [
+      "Implemented real-time hand tracking and gesture recognition using MediaPipe",
+      "Built facial detection system for automated camera triggers",
+      "Created interactive overlay system with creative visual effects",
+      "Added data logging for tracking user interactions and session analytics",
+    ],
+    tech: ["Python", "OpenCV", "MediaPipe", "NumPy"],
+    filters: ["Python", "Computer Vision"],
+    link: "https://github.com/tlope6/Say-Cheese-",
+    image: saycheese,
+    liveLink: null,
+    color: "#ff8a9e",
+  },
+  {
+    id: 2,
+    title: "CapitalChronicles",
+    subtitle: "Finance · Adventure Theme · Budget Planning",
+    description:
+      "A financial app with an adventure theme that gathers user information to determine savings habits and financing goals, calculating leftover income after bills and taxes.",
+    details: [
+      "Designed an engaging adventure-themed UI to make finance approachable",
+      "Built income and expense calculator with tax estimation",
+      "Created short-term and long-term financial planning guidance system",
+      "Implemented user profiling to personalize savings recommendations",
+    ],
+    tech: ["Python", "UI/UX Design", "Financial Modeling"],
+    filters: ["Python", "UI/UX"],
+    link: "https://github.com/tlope6/CapitalChronicles",
+    image: null,
+    liveLink: null,
+    color: "#8affc1",
+  },
+  {id: 3,
     title: "Dream Analyzer",
     subtitle: "Machine Learning · Journal Analysis ",
     description:
@@ -19,13 +57,13 @@ export const PROJECTS = [
     ],
     tech: ["Python", "Scikit-learn", "spaCy", "Hugging Face Transformers", "Streamlit", "Plotly"],
     link: "https://github.com/tlope6/MoodFlow-AI",
-    tags: ["Python", "ML"],
+    filters: ["Python", "Machine Learning", "API"],
     image: dream,
     liveLink: "https://dreamanalyzer-g5dprbfrbyb5dku8oumg99.streamlit.app/",
-    color: "#7c8aff",
+    color: "#f0a6ca",
   },
-  {
-    id: 2,
+   {
+    id: 4,
     title: "HobbyFind", 
     subtitle: "Hobby · Full-Stack · Geolocation",
     description:
@@ -38,13 +76,14 @@ export const PROJECTS = [
     ],
     tech: ["React", "MapBox GL JS", "Supabase", "PostgreSQL", "Parallel API", "HTML", "Node.js", "Express"],
     link: "https://github.com/tlope6/HobbyistFind",
-    tags: ["Python", "OpenCV", "Computer Vision"],
+    tags: ["React", "PostgreSql", "API"],
+    filters: ["React", "API", "UI/UX"],
     image: hobbyist_find,
     liveLink: "https://hobbyist-find.vercel.app/" ,
-    color: "#f79ac0",
+    color: "#a8d8ea",
   },
   {
-    id: 3,
+    id: 5,
     title: "Global Studios",
     subtitle: "WorldWide · Connection · Entertainment Industry",
     description:
@@ -56,10 +95,17 @@ export const PROJECTS = [
       "Designed a data visualization dashboard with SVG-based bar, donut, and area charts breaking down talent distribution across regions, roles, and experience levels",
     ],
     tech: ["React", "Three.js", "SQL", "Supabase"],
+    filters: ["React", "SQL", "Supabase"],
     link: "https://github.com/tlope6/GlobalStudios",
     tags: ["React", "JavaScript", "SQL"],
     image: globalStudios,
     liveLink: "https://tlope6.github.io/GlobalStudios/",
     color: "#9e7bb5",
   },
+];
+
+// Auto-generate filter categories from all projects
+export const FILTER_TAGS = [
+  "All",
+  ...Array.from(new Set(PROJECTS.flatMap((p) => p.filters))),
 ];
